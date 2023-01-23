@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Calendar</title>
+  </head>
+  <body class="bg-purple-100 overflow-scroll relative h-full flex">
+    <main class="place-content-center grid w-full">
+      <div class="w-full grid place-items-center">
+        <h1 class="text-black text-3xl font-bold w-auto mt-10 mb-10">Calendar</h1>
+      </div>
+
+      <div id="container" class="w-full justify-center">
+        <div id="header" class="p-3 flex justify-between text-ppurple">
+          <div id="monthDisplay" class="text-xl"></div>
+          <div>
+            <button
+              id="backButton"
+              class="w-12 cursor-pointer outline-none border-none p-1 rounded-md text-white bg-ppurple"
+            >
+              Back
+            </button>
+            <button
+              id="nextButton"
+              class="w-12 cursor-pointer outline-none border-none p-1 rounded-md text-white bg-ppurple"
+            >
+              Next
+            </button>
+          </div>
+        </div>
+
+        <div id="weekdays" class="w-full flex text-black font-bold justify-between">
+          <div class="p-2 ml-2">Sun</div>
+          <div class="p-2">Mon</div>
+          <div class="p-2">Tue</div>
+          <div class="p-2">Wed</div>
+          <div class="p-2 mr-2">Thur</div>
+          <div class="p-2 mr-2">Fri</div>
+          <div class="p-2 mr-3">Sat</div>
+        </div>
+
+        <div id="calendar" class="w-full m-auto flex flex-wrap"></div>
+      </div>
+
+      <div id="newEventModal">
+        <h2>New Event</h2>
+
+        <input id="eventTitleInput" placeholder="Event Title" />
+
+        <button
+          id="saveButton"
+          class="w-12 cursor-pointer outline-none border-none p-1 rounded-md text-white bg-ppurple"
+        >
+          Save
+        </button>
+        <button
+          id="cancelButton"
+          class="w-13 cursor-pointer outline-none border-none p-1 rounded-md text-white bg-ppurple"
+        >
+          Cancel
+        </button>
+      </div>
+
+      <div id="deleteEventModal">
+        <h2>Event</h2>
+
+        <p id="eventText"></p>
+
+        <button
+          id="deleteButton"
+          class="w-13 cursor-pointer outline-none border-none p-1 rounded-md text-white bg-ppurple"
+        >
+          Delete
+        </button>
+        <button
+          id="closeButton"
+          class="w-12 cursor-pointer outline-none border-none p-1 rounded-md text-white bg-ppurple"
+        >
+          Close
+        </button>
+      </div>
+
+      <div id="modalBackDrop"></div>
+    </main>
+    <footer
+      class="py-4 px-4 fixed bottom-0 inset-x-0 bg-white rounded-t-3xl text-center flex justify-between items-center text-sm text-ppurple uppercase font-mono navBar overflow-x-hidden"
+    ></footer>
+
+    <script type="module" src="./main.js"></script>
+    <script type="module" src="./js/nav.js"></script>
+    <script type="module" src="./js/calendar.js"></script>
+  </body>
+</html>

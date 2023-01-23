@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OnClock/Study</title>
+  </head>
+  <body class="bg-purple-100 overflow-scroll relative h-full">
+    <main class="place-content-center grid w-full">
+      <div class="w-full grid place-items-center">
+        <h1 class="text-black text-3xl font-bold w-auto mt-10 mb-10">Study</h1>
+      </div>
+
+      <div>
+        <iframe
+          style="border-radius: 12px"
+          src="https://open.spotify.com/embed/artist/3UDxdbAXqqKJG1pWgUgOCp?utm_source=generator"
+          width="100%"
+          height="200"
+          frameborder="0"
+          allowfullscreen=""
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"
+        ></iframe>
+      </div>
+
+      <div class="absolute mt-60 ml-80" id="Click">
+        <button></button>
+      </div>
+
+      <div
+        class="mt-6 h-80 w-80 rounded-full border-ppurple border-4 grid place-items-center animate-puls overflow-hidden"
+      >
+        <div
+          class="w-72 h-72 rounded-full border-ppurple border-4 grid place-items-center motion-reduce:animate-ping bg-transparent absolute"
+        ></div>
+        <h1 class="font-bold text-ppurple text-7xl">5:13</h1>
+      </div>
+      <div class="flex justify-evenly mt-4">
+        <button id="start">Start</button>
+        <button>Restart</button>
+        <button>Stop</button>
+      </div>
+    </main>
+
+    <footer
+      class="py-4 px-4 h-20 fixed bottom-0 inset-x-0 bg-white rounded-t-3xl text-center flex justify-between items-center text-sm text-ppurple uppercase font-mono navBar"
+    >
+      <!-- Navigation is in JS -->
+    </footer>
+    <script type="module" src="./main.js"></script>
+    <script type="module" src="./js/nav.js"></script>
+    <script type="module" src="./js/study.js"></script>
+  </body>
+</html>
