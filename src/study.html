@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OnClock/Study</title>
+  </head>
+
+  <body class="bg-purple-100 overflow-scroll relative h-full">
+    <main class="place-content-center grid w-full">
+      <div class="w-full grid place-items-center">
+        <h1 class="text-black text-3xl font-bold w-auto mt-10 mb-10">Study</h1>
+      </div>
+
+      <div class="h-44">
+        <!-- <iframe
+          style="border-radius: 12px; sc"
+          src="https://open.spotify.com/embed/artist/3UDxdbAXqqKJG1pWgUgOCp?utm_source=generator"
+          width="100%;"
+          height="200;"
+          allow="encrypted-media;"
+          loading="lazy;"
+        ></iframe> -->
+
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/6AAP8QatnefQP7Rddwixxa?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="encrypted-media;"></iframe>
+      </div>
+
+      <div class="label h-5 grid place-content-center text-center w-auto mx-auto p-4 rounded-3xl border-ppurple border-2 mb-2 shadow-lg  shadow-ppurple opacity-80  mb-4">
+        <p id="work" class="color-ppurple"></p>
+      </div>
+
+      <div
+        class="mt-0 h-80 w-80 rounded-full border-ppurple border-4 grid place-items-center animate-puls overflow-hidden shadow-lg shadow-ppurple"
+      >
+
+        <div
+          class="w-72 h-72 rounded-full border-ppurple border-4 grid place-items-center motion-reduce:animate-ping bg-transparent absolute"
+        ></div> 
+        <h1 class="font-bold text-ppurple text-7xl flex">
+          <!-- 5:13 -->
+          <p id="minutes">25</p>
+          <p>:</p>
+          <p id="seconds">00</p>
+        </h1>
+      </div>
+
+
+      <div class="flex justify-evenly mt-4">
+
+        <button id="start" class="bg-ppurple text-white p-3 rounded-full" >
+          <svg width="32" height="32" viewBox="0 0 24 24"><path d="M5 5v14a2 2 0 0 0 2.75 1.84L20 13.74a2 2 0 0 0 0-3.5L7.75 3.14A2 2 0 0 0 5 4.89" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+
+        <button id="restart" class="bg-ppurple text-white p-3 rounded-full" onclick="location.reload()">
+          <svg width="32" height="32" viewBox="0 0 16 16"><path fill="currentColor" fill-rule="evenodd" d="M12.75 8a4.5 4.5 0 0 1-8.61 1.834l-1.391.565A6.001 6.001 0 0 0 14.25 8A6 6 0 0 0 3.5 4.334V2.5H2v4l.75.75h3.5v-1.5H4.352A4.5 4.5 0 0 1 12.75 8z" clip-rule="evenodd"/></svg>
+        </button>
+
+      </div>
+    </main>
+
+    <footer
+      class="py-4 px-4 h-20 fixed bottom-0 inset-x-0 bg-white rounded-t-3xl text-center flex justify-between items-center text-sm text-ppurple uppercase font-mono navBar"
+    >
+      <!-- Navigation is in JS -->
+    </footer>
+    <script type="module" src="./main.js"></script>
+    <script type="module" src="./js/nav.js"></script>
+    <script type="module" src="./js/study.js"></script>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+</head>
+<body class="bg-purple-100 overflow-scroll relative h-full">
+  <main class="grid place-content-center w-full">
+    <div class="w-full grid place-items-center">
+      <h1 class="text-black text-3xl font-bold w-auto mt-10 mb-10">Explore</h1>
+    </div>
+
+    <div class="h-10 mb-6 bg-white w-96 overflow-hidden flex justify-center bg-transparent">
+      <button
+        value="technology"
+        class="topic-switch-btn p-2 bg-white rounded-xl text-purple-500 mx-2 focus:font-bold"
+      >
+        Technology
+      </button>
+      <button
+        value="health"
+        class="topic-switch-btn p-2 bg-white rounded-xl text-purple-500 mx-2 focus:font-bold"
+      >
+        Medicine
+      </button>
+      <button
+        value="arts"
+        class="topic-switch-btn p-2 bg-white rounded-xl text-purple-500 mx-2 focus:font-bold"
+      >
+        Arts
+      </button>
+      <button
+        value="business"
+        class="topic-switch-btn p-2 bg-white rounded-xl text-purple-500 mx-2 focus:font-bold"
+      >
+        Business
+      </button>
+    </div>
+
+    <div
+      id="articles"
+      class="place-content-center w-full grid grid-flow-row grid-rows-1 gap-4"
+    ></div>
+  </main>
+
+  <footer
+    class="py-4 px-4 h-20 fixed bottom-0 inset-x-0 bg-white rounded-t-3xl text-center flex justify-between items-center text-sm text-ppurple uppercase font-mono navBar"
+  >
+    <!-- Navigation is in JS -->
+  </footer>
+
+  <script type="module" src="./main.js"></script>
+  <script type="module" src="./js/explore.js"></script>
+  <script type="module" src="./js/nav.js"></script>
+</body>
