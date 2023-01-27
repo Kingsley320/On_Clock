@@ -105,7 +105,7 @@ function loadTasksData() {
       localStorage.setItem('setupTime', now);
   } else {
       if(now-setupTime > hours*60*60*1000) {
-          localStorage.getItem('taskDataBase').clear();
+          localStorage.removeItem('taskDataBase');
           localStorage.setItem('setupTime', now);
       }
   }
@@ -117,39 +117,58 @@ let doneBtn = document.querySelectorAll("div.done");
 [...doneBtn].forEach((done) =>{
 // for (let i = 0; i<doneArr.length; ++i){
   done.addEventListener("click", function() {
-        let finalDelete = confirm("Mark As Completed?");
+    alert();
+        // let finalDelete = confirm("Mark As Completed?");
 
         // let ele = this.getAttribute("data-indexdata")
         // let element = document.querySelector("#done > a");
         // let deleteIndex = element.getAttribute('data-indexdata');
-        // console.log(ele);
+        console.log(ele);
 
-        if (finalDelete) {
-          let element = document.querySelector("div.done");
-          let deleteIndex = element.getAttribute('data-indexdata');
-          console.log(deleteIndex)
+        // if (finalDelete) {
+        //   let element = document.querySelector("div.done");
+        //   let deleteIndex = element.getAttribute('data-indexdata');
+        //   console.log(deleteIndex)
 
-          // Splice task
-          tasks = tasks.splice(deleteIndex, 1);
-          // localStorage.setItem("taskDataBase", JSON.stringify(tasks));
-          console.log(tasks)
+        //   // Splice task
+        //   tasks = tasks.splice(deleteIndex, 1);
+        //   // localStorage.setItem("taskDataBase", JSON.stringify(tasks));
+        //   console.log(tasks)
         
-          //reload a new array without the deleted task
-          localStorage.setItem("taskDataBase", JSON.stringify(tasks));
-          // then reload the list
+        //   //reload a new array without the deleted task
+        //   localStorage.setItem("taskDataBase", JSON.stringify(tasks));
+        //   // then reload the list
+
+        localStorage.removeItem('taskDataBase');
           loadTasksData();
-        }
+        // }
 
   });
   loadTasksData();
 });
   
 
+function sendNotifications(){
+          let btn = document.getElementById('btn');
+        btn.addEventListener('click', () => {
+            Notification.requestPermission().then(perm => {
+                if(perm === 'granted'){
+                    const notification =new Notification('Remember to complete your tasks today',
+                    {
+                    body: 'Consistency is key!',
+                     icon: './logo.jpg',
+                     tag: 'message',
+                     timestamp: `Date:  ${new Date()}`,
+                     vibrate: [300, 100, 400]
+                    })
+                }
+            })
+        })
+}
+
+setInterval(sendNotifications, 3600000);
+
 // })
-
-    
-
-
   // let doneBtn = document.querySelectorAll("div.done");
   // [...doneBtn].forEach((done)=>{
   //   console.log(done);

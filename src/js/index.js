@@ -1,5 +1,5 @@
 function redirect() {
-  setTimeout(send, 5000);
+  setTimeout(send, 3500);
 }
 
 function send() {

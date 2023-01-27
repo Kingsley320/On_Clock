@@ -13,9 +13,9 @@
     <script type="module" src="./js/nav.js" defer></script>
     <script type="module" src="./js/calendar.js" defer></script>
   </head>
-  <body class="bg-purple-100 overflow-scroll relative h-full 
+  <body class="bg-purple-100 overflow-x-hidden relative h-full 
   ">
-    <main class="grid place-content-center w-full">
+    <main class="grid place-content-center w-full mb-34">
       <div class="w-full grid place-items-center">
         <h1 class="text-black text-3xl font-bold w-auto mt-10 mb-10">Calendar</h1>
       </div>
@@ -49,11 +49,11 @@
           <div class="p-2 mr-3">Sat</div>
         </div>
 
-        <div id="calendar" class="w-full m-auto flex flex-wrap  ml-1 mb-4"></div>
+        <div id="calendar" class="w-full m-auto flex flex-wrap  ml-4 mb-4"></div>
       </div>
 
-      <div id="newEventModal">
-        <h2 class="text-ppurple font-bold">New Event</h2>
+      <div id="newEventModal" class="ml-4">
+        <h2 class="text-ppurple font-bold ">New Event</h2>
 
         <input id="eventTitleInput" placeholder="Event Title" />
 
@@ -71,8 +71,8 @@
         </button>
       </div>
 
-      <div id="deleteEventModal">
-        <h2 class="text-ppurple font-bold">Event</h2>
+      <div id="deleteEventModal" class="ml-4">
+        <h2 class="text-ppurple font-bold ">Event</h2>
 
         <p id="eventText"></p>
 

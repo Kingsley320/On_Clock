@@ -1,0 +1,6 @@
+{
+  "appId": "com.onclock.app",
+  "appName": "On Clock",
+  "webDir": "dist",
+  "bundledWebRuntime": false
+}

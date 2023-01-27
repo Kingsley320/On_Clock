@@ -140,5 +140,26 @@ function initButtons() {
   document.getElementById("closeButton").addEventListener("click", closeModal);
 }
 
+
+function sendNotifications(){
+  let btn = document.getElementById('btn');
+btn.addEventListener('click', () => {
+    Notification.requestPermission().then(perm => {
+        if(perm === 'granted'){
+            const notification =new Notification('Remember your goal today today',
+            {
+            body: 'Consistency is key!',
+             icon: './logo.jpg',
+             tag: 'message',
+             timestamp: `Date:  ${new Date()}`,
+             vibrate: [300, 100, 400]
+            })
+        }
+    })
+})
+}
+
+setInterval(sendNotifications, 10800000);
+
 initButtons();
 load();

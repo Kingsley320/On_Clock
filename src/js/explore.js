@@ -28,7 +28,7 @@ function News() {
           output.innerHTML += `
             <a href="${response.results[i].url}"
               ><div
-                class="bg-purple-200 w-85 h-28 rounded-xl border-b-4 border-ppurple flex   overflow-hidden"
+                class="bg-purple-200 w-80 h-28 rounded-xl border-b-4 border-ppurple flex   overflow-hidden"
               >
                 <img
                   src="${response.results[i]["multimedia"][1].url}"
@@ -49,13 +49,25 @@ function News() {
               </div></a
             >
           `;
-          console.log(response.results[i]["multimedia"][1].caption);
+          // console.log(response.results[i]["multimedia"][1].caption);
         } catch (err) {
           console.log(err);
         }
-        console.log(response.results[i].title);
+        // console.log(response.results[i].title);
       }
     });
 }
+
+  var a=0;
+  let articles = document.getElementById('articles');
+  let explore = localStorage.getItem('explorepoint');
+  if (explore = null){
+
+  }
+  localStorage.setItem('explorepoint', a=0);
+
+  articles.onload = () => {
+    localStorage.setItem('explorepoint', a++)
+  }
 
 News();
