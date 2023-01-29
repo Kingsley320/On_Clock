@@ -56,7 +56,6 @@ function load() {
 
   for (let i = 1; i <= paddingDays + daysInMonth; i++) {
     const daySquare = document.createElement("div");
-    daySquare.classList.add("day");
     daySquare.setAttribute(
       "style",
       "width: 3.125rem; padding: 5px; height: 3.125rem; cursor: pointer; box-sizing: border-box; background-color: white; margin: 2px; box-shadow: 0px 0px 3px #CBD4C2; display: grid; place-items-center; justify-content: space-between; border: .5px solid rgb(169, 3, 252); "
@@ -81,9 +80,7 @@ function load() {
       }
 
       daySquare.addEventListener("click", () => openModal(dayString));
-    } else {
-      daySquare.classList.add("padding");
-    }
+    } else {}
 
     calendar.appendChild(daySquare);
     daySquare.style.backgroundColor="ppurple";

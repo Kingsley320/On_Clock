@@ -1,7 +1,9 @@
 // variable declaration
 let workSession = document.getElementById('work');
 let breakSession = document.getElementById('break');
-let audio = new Audio('./sounds/start.wav');
+let aud = document.getElementById('aud');
+let pause = document.getElementById('pause');
+// let audio = new Audio('./sounds/start.wav');
 
 let workTime = 25;
 let breakTime = 5;
@@ -20,7 +22,7 @@ document.getElementById('start').addEventListener('click', ()=>{
 // start timer
 function start() {
  
-    audio.play()
+    aud.play()
     //Instead of changing button, i change pointer events
     document.getElementById('start').style.pointerEvents = 'none';
     document.getElementById('start').style.opacity = '0.4';
@@ -55,8 +57,8 @@ function start() {
 
                     // change the painel
                     document.getElementById('work').innerHTML = 'break';
-                    let audio = new Audio('sounds/pause.mps');
-                    audio.play()
+                    // let audio = new Audio('sounds/pause.mps');
+                    pause.play()
                     // console.log("hi")
                 }else {
                     // continue work
